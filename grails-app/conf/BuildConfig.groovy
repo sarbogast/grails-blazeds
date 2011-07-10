@@ -15,7 +15,7 @@ grails.project.dependency.resolution = {
 		grailsCentral()
 
 		mavenRepo 'http://maven.springframework.org/external' // blazeds
-		mavenRepo 'http://maven.springframework.org/milestone' // flex-core:1.5.0.M1
+		mavenRepo 'http://maven.springframework.org/milestone' // flex-core:1.5.0.RELEASE
 		ebr() // SpringSource  http://www.springsource.com/repository
 		mavenCentral()
 
@@ -31,7 +31,7 @@ grails.project.dependency.resolution = {
 		}
 		runtime 'edu.emory.mathcs.backport:com.springsource.edu.emory.mathcs.backport:3.1.0'
 
-		runtime('org.springframework.flex:spring-flex-core:1.5.0.M1') {
+		runtime('org.springframework.flex:spring-flex-core:1.5.0.RELEASE') {
 			transitive = false
 		}
 
