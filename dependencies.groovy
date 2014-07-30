@@ -15,11 +15,16 @@ grails.project.dependency.resolution = {
 		grailsCentral()
 
 		mavenRepo 'http://maven.springframework.org/external' // blazeds
-		mavenRepo 'http://maven.springframework.org/milestone' // flex-core:1.5.0.RELEASE
+        mavenRepo 'http://maven.springframework.org/release'
+		mavenRepo 'http://maven.springframework.org/milestone' // flex-core:1.5.0
+        mavenRepo 'http://repository.sonatype.org/content/groups/flexgroup/'
+        mavenRepo 'http://repository.sonatype.org/content/groups/public/'
+
 		ebr() // SpringSource  http://www.springsource.com/repository
 		mavenCentral()
 
-		mavenRepo 'http://maven.sinusgear.com/maven_repo' // flex-messaging-opt, flex-rds-server
+		// mavenRepo 'http://maven.sinusgear.com/maven_repo' // flex-messaging-opt, flex-rds-server
+//		http://maven.sinusgear.com/maven_repo/com/adobe/flex/flex-messaging-opt/4.0.0.14931.1/
 	}
 
 	dependencies {
@@ -35,15 +40,13 @@ grails.project.dependency.resolution = {
 			transitive = false
 		}
 
-//		http://maven.sinusgear.com/maven_repo/com/adobe/flex/flex-messaging-opt/4.0.0.14931.1/
 
-		runtime 'com.adobe.blazeds:blazeds-common:4.0.0.14931',
+
+		runtime 'com.adobe.blazeds:blazeds-remoting:4.0.0.14931',
+                'com.adobe.blazeds:blazeds-common:4.0.0.14931',
 		        'com.adobe.blazeds:blazeds-core:4.0.0.14931',
-				  'com.adobe.blazeds:blazeds-proxy:4.0.0.14931',
-				  'com.adobe.blazeds:blazeds-remoting:4.0.0.14931'
-
-//		runtime 'com.adobe.flex:flex-messaging-opt:4.0.0.14931.1',
-//		        'com.adobe.flex:flex-rds-server:4.0.0.14931.1'
-		runtime 'com.adobe.flex:flex-messaging-opt:4.0.0.14931.1'
+				'com.adobe.blazeds:blazeds-proxy:4.0.0.14931'
+//                'com.adobe.blazeds:blazeds-rds-server:4.0.0.14931'
+//                'com.adobe.flex:flex-messaging-opt:4.0.0.14931'
 	}
 }
